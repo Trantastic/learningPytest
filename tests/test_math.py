@@ -4,3 +4,16 @@ def test_one_plus_one():
     assert 1 + 1 == 2
 
 #To run test on commandline, python3 -m pytest
+
+#Creating a failed test to see how pytest handles test failures
+#def test_one_plus_two():
+#    a = 1
+#    b = 2
+#    c = 0
+#    assert a + b == c
+
+def test_one_plus_two():
+    a = 1
+    b = 2
+    c = 3
+    assert a + b = c
