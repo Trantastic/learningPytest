@@ -1,3 +1,5 @@
+import pytest
+
 #In pytest, any tests with the test_ naming will be executed as test cases
 def test_one_plus_one():
     #assert statement is native to python
@@ -16,4 +18,9 @@ def test_one_plus_two():
     a = 1
     b = 2
     c = 3
-    assert a + b = c
+    assert a + b == c
+
+def test_divide_by_zero():
+    with pytest.raises(ZeroDivisionError) as e:
+        num = 1 / 0
+    assert 'division by zero' in str(e.value)
